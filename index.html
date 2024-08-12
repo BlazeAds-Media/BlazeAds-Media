@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        .banner {
+            width: 100%;
+            height: 800px;
+            background-image: url('Banner.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .mode-buttons {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 20px;
+        }
+
+        .mode-buttons button {
+            margin-right: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .mode-buttons button:hover {
+            opacity: 0.8;
+        }
+
+        body.light-mode {
+            background-color: white;
+            color: black;
+        }
+
+        body.dark-mode {
+            background-color: #2c2c2c;
+            color: white;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        .nav-container a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+
+        .nav-container a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            margin-bottom: 20px;
+        }
+
+        section p {
+            line-height: 1.6;
+        }
+
+        .social-buttons {
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .social-buttons a {
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .social-buttons img {
+            width: 40px;
+            height: 40px;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-buttons img:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mode-buttons">
+        <button onclick="setMode('light')">Light Mode</button>
+        <button onclick="setMode('dark')">Dark Mode</button>
+    </div>
+
+    <div class="banner">
+    </div>
+
+    <div class="nav-container">
+        <a href="#about-us">About Us</a>
+        <a href="#contact-us">Contact Us</a>
+    </div>
+    
+    <div class="social-buttons">
+        <a href="https://www.instagram.com/blazead.agency" target="_blank">
+            <img src="Instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61563820034948&mibextid=ZbWKwL" target="_blank">
+            <img src="facebook.png" alt="Facebook">
+        </a>
+    </div>
+
+    <section id="about-us">
+        <h2>About Us</h2>
+        <p style="font-size: 20px;">At Blaze Ad, we specialize in one thing: effective advertising that gets results. 🚀✨ Our mission is to help companies and businesses amplify their presence and reach their target audience with precision and impact. Whether you're looking to launch a new campaign or boost an existing one, we have the expertise to make it happen.</p>
+        <p style="font-size: 20px;">We understand the importance of standing out in a crowded marketplace, and we are committed to crafting advertisements that do just that. With a focus on creativity, strategy, and execution, Blaze Ad delivers campaigns that not only catch the eye but also drive meaningful engagement and growth.</p>
+        <p style="font-size: 20px;">Ready to elevate your advertising efforts? Feel free to send us a message 📲—we’re here to help your brand blaze its trail to success.</p>
+    </section>
+
+    <section id="contact-us">
+        <h2>Contact Us</h2>
+        <p style="font-size: 20px;">Email: <a href="mailto:BlazeAd10@gmail.com">BlazeAd10@gmail.com</a></p>
+    </section>
+
+    <script>
+        function setMode(mode) {
+            if (mode === 'dark') {
+                document.body.classList.add('dark-mode');
+                document.body.classList.remove('light-mode');
+            } else {
+                document.body.classList.add('light-mode');
+                document.body.classList.remove('dark-mode');
+            }
+        }
+    </script>
+
+</body>
+</html>
